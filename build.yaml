@@ -1,32 +1,32 @@
 # board: [ "seeeduino_xiao_ble" ]
-# shield: [ "spl1t_left", "spl1t_right" ]
+# shield: [ "corne_left", "corne_right" ]
 # include:
 #   - board: bdn9_rev2
 #   - board: seeeduino_xiao_ble
 #     shield: reviung41
 #   - board: seeeduino_xiao_ble
-#     shield: spl1t_left
+#     shield: corne_left
 #     snippet: studio-rpc-usb-uart
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
-#     artifact-name: spl1t_left_with_studio
+#     artifact-name: corne_left_with_studio
 #
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: spl1t_dongle
+    shield: corne_dongle
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: xiao_dongle
 
   - board: seeeduino_xiao_ble
-    shield: spl1t_left nice_view_adapter nice_view_gem
+    shield: corne_left nice_view_adapter nice_view_gem
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    artifact-name: xiao_spl1t_left
+    artifact-name: xiao_corne_left
 
   - board: seeeduino_xiao_ble
-    shield: spl1t_right nice_view_adapter nice_view_gem
+    shield: corne_right nice_view_adapter nice_view_gem
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    artifact-name: xiao_spl1t_right
+    artifact-name: xiao_corne_right
 
   - board: seeeduino_xiao_ble
     shield: settings_reset
