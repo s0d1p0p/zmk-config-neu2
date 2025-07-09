@@ -1,0 +1,9 @@
+
+/ {
+    pro_micro_i2c: &i2c0 {
+        compatible = "nordic,nrf-twi"; // compatible with nRF boards
+        status = "okay";
+        scl-pin = <26>; // Replace with actual pin if needed
+        sda-pin = <27>; // Replace with actual pin if needed
+    };
+};
