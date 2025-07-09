@@ -1,4 +1,4 @@
-name: Build ZMK Firmware2
+name: Build ZMK Firmware
 
 on:
   push:
