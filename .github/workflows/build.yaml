@@ -22,7 +22,7 @@ jobs:
     - name: Install West and deps
       run: |
         pip install west
-        west init -l config
+        west init -m https://github.com/zmkfirmware/zmk.git --mr main
         west update
         pip install -r zmk/app/requirements.txt
 
