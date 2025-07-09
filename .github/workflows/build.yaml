@@ -24,9 +24,8 @@ jobs:
         pip install west
         rm -rf .west
         west init -m https://github.com/zmkfirmware/zmk.git --mr main --mf app/west.yml
-
         west update
-        pip install -r zmk/app/requirements.txt
+        pip install -r zmk/scripts/requirements.txt
 
     - name: Build Left
       run: |
