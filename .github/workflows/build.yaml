@@ -29,7 +29,7 @@ jobs:
 
     - name: Build Left
       run: |
-        west build -s zmk/app . -d build/left -b seeeduino_xiao_ble -- \
+        west build -s zmk/app -d build/left -b seeeduino_xiao_ble -- \
           -DZMK_CONFIG=config \
           -DSHIELD=corne_left \
           -DZMK_EXTRA_MODULES=. \
@@ -37,7 +37,7 @@ jobs:
 
     - name: Build Right
       run: |
-        west build -s zmk/app . -d build/right -b seeeduino_xiao_ble -- \
+        west build -s zmk/app -d build/right -b seeeduino_xiao_ble -- \
           -DZMK_CONFIG=config \
           -DSHIELD=corne_right \
           -DZMK_EXTRA_MODULES=. \
@@ -45,12 +45,12 @@ jobs:
 
     - name: Build Dongle (Central)
       run: |
-        west build -s zmk/app . -d build/central -b seeeduino_xiao_ble -- \
+        west build -s zmk/app -d build/central -b seeeduino_xiao_ble -- \
           -DZMK_CONFIG=config \
           -DSHIELD=corne_right \
           -DZMK_EXTRA_MODULES=. \
           -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-
+  
     - name: Upload Left Firmware
       uses: actions/upload-artifact@v4
       with:
